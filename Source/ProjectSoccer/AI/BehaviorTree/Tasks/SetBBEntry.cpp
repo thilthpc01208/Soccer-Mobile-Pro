@@ -43,6 +43,7 @@ void USetBBObject::SetKeyValue(UBlackboardComponent* pComponent)
 	pComponent->SetValueAsObject(BlackboardKey.SelectedKeyName, pCopyObject);
 }
 
+#if WITH_EDITOR
 void USetBBObject::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -57,3 +58,4 @@ void USetBBObject::PostEditChangeProperty(FPropertyChangedEvent& PropertyChanged
 		BlackboardKey.AddObjectFilter(this, GET_MEMBER_NAME_CHECKED(USetBBObject, BlackboardKey), ValidObjectClass);
     }
 }
+#endif

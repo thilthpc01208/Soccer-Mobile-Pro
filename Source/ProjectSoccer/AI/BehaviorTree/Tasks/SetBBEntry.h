@@ -45,5 +45,7 @@ private:
     virtual void SetKeyValue(UBlackboardComponent* pComponent) override;
     virtual void SetKeyFilter() override;
 
+#if WITH_EDITOR
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
 };

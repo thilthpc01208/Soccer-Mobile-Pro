@@ -57,6 +57,7 @@ float UTeamRoleDecision::CombineScores()
     return FMath::Pow(result , 1.f / static_cast<float>(Scores.Num()));
 }
 
+#if WITH_EDITOR
 void UTeamRoleDecision::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -85,3 +86,4 @@ void UTeamRoleDecision::PostEditChangeProperty(FPropertyChangedEvent& PropertyCh
         }
     }
 }
+#endif

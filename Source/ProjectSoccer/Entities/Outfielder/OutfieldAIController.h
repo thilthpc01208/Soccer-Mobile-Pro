@@ -92,12 +92,13 @@ protected:
     virtual void BeginPlay() override;
     virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
     virtual void Tick(float DeltaSeconds) override;
+#if WITH_EDITOR
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
     virtual void OnPossess(APawn* InPawn) override;
     virtual void OnUnPossess() override;
 
     void InitializeBlackboardData();
     virtual UBlackboardData* GetBlackboardAsset() const override { return InitialBlackboard; }
 };
-
 

@@ -12,6 +12,7 @@ EBTNodeResult::Type USetObjectToNull::ExecuteTask(UBehaviorTreeComponent& OwnerC
     return EBTNodeResult::Succeeded;
 }
 
+#if WITH_EDITOR
 void USetObjectToNull::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -23,3 +24,4 @@ void USetObjectToNull::PostEditChangeProperty(FPropertyChangedEvent& PropertyCha
 		ObjectKey.AddObjectFilter(this, GET_MEMBER_NAME_CHECKED(USetObjectToNull, ObjectKey), ValidObjectClass);
     }
 }
+#endif

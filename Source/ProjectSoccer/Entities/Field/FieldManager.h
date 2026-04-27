@@ -122,7 +122,9 @@ private:
     void BeginBuildFieldState();
     void CheckFieldStateReady();
 
+#if WITH_EDITOR
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+#endif
     static void BuildFieldState(UFieldState* pBuildingState, const FFieldSnapshot& snapshot);
     static void SetInTeamHalf(const UFieldState* pBuildingState, const FFieldSnapshot& snapshot, FOutfielderStateInfo& stateInfo);
 };

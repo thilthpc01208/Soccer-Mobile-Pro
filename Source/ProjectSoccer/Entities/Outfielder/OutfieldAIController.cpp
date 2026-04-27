@@ -52,6 +52,7 @@ void AOutfieldAIController::Tick(float DeltaSeconds)
     }
 }
 
+#if WITH_EDITOR
 void AOutfieldAIController::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
 	Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -62,6 +63,7 @@ void AOutfieldAIController::PostEditChangeProperty(FPropertyChangedEvent& Proper
         OnBlackboardOwnerChanged.Broadcast(this, InitialBlackboard);
     }
 }
+#endif
 
 void AOutfieldAIController::InitializeBlackboardData()
 {

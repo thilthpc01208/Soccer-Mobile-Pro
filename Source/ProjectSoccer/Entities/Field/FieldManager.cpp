@@ -221,6 +221,7 @@ void AFieldManager::CheckFieldStateReady()
     }
 }
 
+#if WITH_EDITOR
 void AFieldManager::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
 {
     Super::PostEditChangeProperty(PropertyChangedEvent);
@@ -251,6 +252,7 @@ void AFieldManager::PostEditChangeProperty(FPropertyChangedEvent& PropertyChange
     //    OnDebugViewNeedsRefresh.Broadcast(GetFieldSize(), ReadyState->InfluenceMap.GetGridTiles());
     //}
 }
+#endif
 
 //----------------------------------------------------------------------------------------------------
 //		NOTES:
@@ -405,4 +407,3 @@ void AFieldManager::SetInTeamHalf(const UFieldState* pBuildingState, const FFiel
 //{
 //	// TODO: 
 //}
-
