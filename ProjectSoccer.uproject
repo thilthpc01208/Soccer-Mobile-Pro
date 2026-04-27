@@ -1,0 +1,36 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.4",
+    "Category": "",
+    "Description": "ProjectSoccer migration workspace",
+    "Modules": [
+        {
+            "Name": "ProjectSoccer",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        },
+        {
+            "Name": "ProjectSoccerEditor",
+            "Type": "Editor",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "EnhancedInput",
+            "Enabled": true
+        },
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "PythonScriptPlugin",
+            "Enabled": true
+        },
+        {
+            "Name": "EditorScriptingUtilities",
+            "Enabled": true
+        }
+    ]
+}
